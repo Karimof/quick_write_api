@@ -1,0 +1,25 @@
+{
+  "quickWriteApiApp": {
+    "role": {
+      "home": {
+        "title": "Roles",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Yangi Role qo`shish",
+        "createOrEditLabel": "Roleni tahrirlash",
+        "notFound": "No Roles found"
+      },
+      "created": "Role {{ param }} bilan qo`shildi",
+      "updated": "{{ param }}- Role saqlandi",
+      "deleted": "{{ param }}- Role o`chirildi",
+      "delete": {
+        "question": "{{ id }}- Roleni o`chirmoqchimisiz? "
+      },
+      "detail": {
+        "title": "Role"
+      },
+      "id": "ID",
+      "name": "Name",
+      "customer": "Customer"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "applications": "*",
+  "changelogDate": "20221226111254",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "uz_group",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Group",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "id",
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "group",
+      "ownerSide": false,
+      "relationshipName": "group",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

@@ -1,0 +1,38 @@
+entity Group(uz_group) {
+    name String required unique
+    password String required unique
+}
+
+entity Role(uz_role){
+	name String required
+}
+
+entity Text(uz_text){
+	text String required
+}
+
+entity Customer(uz_customer){
+	active String
+    CustomerName String required
+    email String required unique
+    password String required
+    recordWpm Long
+    photo String
+    createdAt LocalDate
+}
+
+relationship OneToOne{
+	Customer{group(id)} to Group{group(id)}
+}
+
+relationship ManyToMany{
+	Role{customer} to Customer{role}
+}
+
+dto * with mapstruct
+
+service * with serviceClass
+
+paginate * with pagination
+
+filter Group, Text, Customer

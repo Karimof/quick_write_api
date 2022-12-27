@@ -1,0 +1,39 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="role">
+      <h2 data-cy="roleDetailsHeading"><span jhiTranslate="quickWriteApiApp.role.detail.title">Role</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ role.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="quickWriteApiApp.role.name">Name</span></dt>
+        <dd>
+          <span>{{ role.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="quickWriteApiApp.role.customer">Customer</span></dt>
+        <dd>
+          <span *ngFor="let customer of role.customers; let last = last">
+            <a [routerLink]="['/customer', customer.id, 'view']">{{ customer.id }}</a
+            >{{ last ? '' : ', ' }}
+          </span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Orqaga</span>
+      </button>
+
+      <button type="button" [routerLink]="['/role', role.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">O`zgartir</span>
+      </button>
+    </div>
+  </div>
+</div>

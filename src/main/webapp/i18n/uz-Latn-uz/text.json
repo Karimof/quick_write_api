@@ -1,0 +1,24 @@
+{
+  "quickWriteApiApp": {
+    "text": {
+      "home": {
+        "title": "Texts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Yangi Text qo`shish",
+        "createOrEditLabel": "Textni tahrirlash",
+        "notFound": "No Texts found"
+      },
+      "created": "Text {{ param }} bilan qo`shildi",
+      "updated": "{{ param }}- Text saqlandi",
+      "deleted": "{{ param }}- Text o`chirildi",
+      "delete": {
+        "question": "{{ id }}- Textni o`chirmoqchimisiz? "
+      },
+      "detail": {
+        "title": "Text"
+      },
+      "id": "ID",
+      "text": "Text"
+    }
+  }
+}

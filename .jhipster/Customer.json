@@ -1,0 +1,63 @@
+{
+  "applications": "*",
+  "changelogDate": "20221226111257",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "uz_customer",
+  "fields": [
+    {
+      "fieldName": "active",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "recordWpm",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "photo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Customer",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "id",
+      "otherEntityName": "group",
+      "otherEntityRelationshipName": "group",
+      "ownerSide": true,
+      "relationshipName": "group",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "role",
+      "otherEntityRelationshipName": "customer",
+      "ownerSide": false,
+      "relationshipName": "role",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

@@ -1,0 +1,32 @@
+{
+  "quickWriteApiApp": {
+    "customer": {
+      "home": {
+        "title": "Customers",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Yangi Customer qo`shish",
+        "createOrEditLabel": "Customerni tahrirlash",
+        "notFound": "No Customers found"
+      },
+      "created": "Customer {{ param }} bilan qo`shildi",
+      "updated": "{{ param }}- Customer saqlandi",
+      "deleted": "{{ param }}- Customer o`chirildi",
+      "delete": {
+        "question": "{{ id }}- Customerni o`chirmoqchimisiz? "
+      },
+      "detail": {
+        "title": "Customer"
+      },
+      "id": "ID",
+      "active": "Active",
+      "customerName": "Customer Name",
+      "email": "Email",
+      "password": "Password",
+      "recordWpm": "Record Wpm",
+      "photo": "Photo",
+      "createdAt": "Created At",
+      "group": "Group",
+      "role": "Role"
+    }
+  }
+}

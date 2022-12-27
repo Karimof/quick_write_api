@@ -32,9 +32,9 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:file:./target/h2db/db/quick_write_api;DB_CLOSE_DELAY=-1;MODE=LEGACY
-    username: quick_write_api
-    password:
+    url: jdbc:postgresql://localhost:5432/quick_api
+    username: postgres
+    password: 123
     hikari:
       poolName: Hikari
       auto-commit: false
